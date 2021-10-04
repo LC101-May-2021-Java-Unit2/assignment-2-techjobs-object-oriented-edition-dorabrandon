@@ -22,7 +22,9 @@ public class CoreCompetency {
 
     @Override
     public String toString() {
-        return value;
+        if(this.value==""){
+            return "Data not available";
+        } else {return value;}
     }
 
     @Override
