@@ -34,7 +34,6 @@ public class JobTest {
         Assert.assertTrue(job3.getPositionType() instanceof PositionType);
         Assert.assertTrue(job3.getCoreCompetency() instanceof CoreCompetency);
         Assert.assertTrue(job3 instanceof Job);
-
     }
 
     @Test
@@ -50,7 +49,6 @@ public class JobTest {
        String text = job1.toString();
         assertEquals('\n',text.charAt(0));
         assertEquals('\n', text.charAt(text.length()-1));
-
     }
 
     @Test
@@ -65,7 +63,6 @@ public class JobTest {
                 "Core Competency: Persistence"+
                 '\n';
         assertEquals(text,job1.toString());
-
     }
 
     @Test
