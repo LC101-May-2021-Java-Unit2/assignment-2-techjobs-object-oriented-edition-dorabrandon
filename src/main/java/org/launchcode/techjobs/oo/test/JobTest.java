@@ -24,11 +24,11 @@ public class JobTest {
     @Test
     public void testJobConstructorSetsAllFields(){
         Job job3 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        assertTrue(job3.getName().equals("Product tester"));
-        assertTrue(job3.getEmployer().getValue()=="ACME");
-        assertTrue(job3.getLocation().getValue()=="Desert");
-        assertTrue(job3.getPositionType().getValue()=="Quality control");
-        assertTrue(job3.getCoreCompetency().getValue()=="Persistence");
+        Assert.assertEquals("Product tester", job3.getName());
+        Assert.assertEquals("ACME", job3.getEmployer().getValue());
+        Assert.assertEquals("Desert",job3.getLocation().getValue());
+        Assert.assertEquals("Quality control", job3.getPositionType().getValue());
+        Assert.assertEquals("Persistence",job3.getCoreCompetency().getValue());
         Assert.assertTrue(job3.getEmployer() instanceof Employer);
         Assert.assertTrue(job3.getLocation() instanceof Location);
         Assert.assertTrue(job3.getPositionType() instanceof PositionType);
@@ -40,7 +40,7 @@ public class JobTest {
     public void testJobsForEquality(){
         Job job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));;
         Job job2 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));;
-        assertTrue(job1.getId() != job2.getId());
+        assertFalse(job1.getId() != job2.getId());
     }
 
     @Test
