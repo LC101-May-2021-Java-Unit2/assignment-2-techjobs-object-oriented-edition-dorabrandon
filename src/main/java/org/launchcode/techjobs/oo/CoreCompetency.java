@@ -22,7 +22,9 @@ public class CoreCompetency {
 
     @Override
     public String toString() {
-        return value;
+        if(this.value==""){
+            return "Data not available";
+        } else {return value;}
     }
 
     @Override
@@ -41,4 +43,15 @@ public class CoreCompetency {
     // TODO: Use the "Generate" tool to add a getter and setter for the 'value' field but
     //  ONLY a getter for the 'id' field.
 
+    public int getId() {
+        return id;
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
 }
